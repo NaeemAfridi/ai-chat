@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { ArrowUp, Send } from "lucide-react"
+import { ArrowUp} from "lucide-react"
 
 
 export default function ChatInterface({ selectedFile }) {
@@ -19,7 +19,7 @@ export default function ChatInterface({ selectedFile }) {
   }
 
   return (
-    <div className="flex flex-col h-full bg-gray-50 w-full py-10">
+    <div className="flex flex-col h-full bg-gray-50 w-full">
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message, index) => (
           <div key={index} className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}>
@@ -31,7 +31,7 @@ export default function ChatInterface({ selectedFile }) {
           </div>
         ))}
       </div>
-      <div className="bg-gray-200 w-1/2 rounded-lg mx-auto p-4">
+      <div className="bg-gray-200 w-full md:w-1/2 lg:w-1/2 rounded-lg mx-auto p-4">
         <div className="flex items-center">
           <input
             type="text"

@@ -8,15 +8,13 @@ const App = () => {
   const [selectedFile, setSelectedFile] = useState(null)
 
   return (
-    <div  className="flex h-screen bg-gray-100">
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden flex h-[calc(100vh-100px)] bg-gray-100">
         <Sidebar isOpen={isSidebarOpen} onClose={() => setIsSidebarOpen(false)} onFileSelect={setSelectedFile} />
         <main  className="flex flex-col w-full">
         <Header onMenuClick={() => setIsSidebarOpen(!isSidebarOpen)} />
           <ChatInterface selectedFile={selectedFile} />
         </main>
       </div>
-    </div>
   )
 }
 export default App;
