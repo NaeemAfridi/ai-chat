@@ -22,7 +22,7 @@ const ChatSidebar = ({ file, onClose }) => {
 
   return (
     <div
-      className={`fixed right-0 bottom-0 w-96 bg-white dark:bg-gray-800 shadow-lg rounded-tl-lg rounded-bl-lg transition-all ${
+      className={`fixed right-2 bottom-2 w-96 bg-white dark:bg-gray-800 shadow-lg rounded-tl-lg rounded-bl-lg transition-all ${
         isMinimized ? "h-16" : "h-[500px]"
       }`}
     >
@@ -50,7 +50,7 @@ const ChatSidebar = ({ file, onClose }) => {
         </div>
       </div>
       {!isMinimized && (
-        <div className="p-4 h-[calc(100%-120px)] overflow-y-auto">
+        <div className="p-4 h-[calc(100%-130px)] overflow-y-auto">
           {messages.map((msg, index) => (
             <div
               key={index}

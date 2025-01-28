@@ -14,7 +14,7 @@ const App = () => {
   };
 
   return (
-    <div className={`min-h-screen ${isDarkMode ? "dark" : ""}`}>
+    <div className={`min-h-screen ${isDarkMode ? "dark dark:bg-gray-900" : "bg-gray-100 "}`}>
       <div className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
         <header className="p-4 border-b border-gray-300 dark:border-gray-700 flex justify-between items-center">
           <h1 className="text-2xl font-bold">Chat App</h1>
@@ -29,7 +29,7 @@ const App = () => {
             )}
           </button>
         </header>
-        <main className="p-4">
+        <main className="p-4 bg-white dark:bg-gray-900">
           <FileUpload onFileUpload={(files) => setFiles(files)} />
           <div className="mt-4">
             {files.map((file, index) => (
