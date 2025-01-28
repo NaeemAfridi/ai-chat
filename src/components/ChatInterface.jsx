@@ -19,7 +19,7 @@ export default function ChatInterface({ selectedFile }) {
   }
 
   return (
-    <div className="flex flex-col h-full bg-gray-50 w-full">
+    <div className="flex flex-col h-full bg-gray-50 w-full p-4">
       <div className="flex-1 overflow-y-auto p-4 space-y-4">
         {messages.map((message, index) => (
           <div key={index} className={`flex ${message.isUser ? "justify-end" : "justify-start"}`}>
